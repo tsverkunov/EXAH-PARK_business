@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "homepage": "https://tsverkunov.github.io/EXAH-PARK_business",
   "dependencies": {
     "browserslist": "^4.7.3",
     "gulp": "^4.0.2",
