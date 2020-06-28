@@ -1,0 +1,153 @@
+
+
+@media screen and (max-width: 850px)
+	body.lock
+		overflow: hidden
+
+	.header
+		&__body
+			height: 50px	
+
+		&__logo 
+			flex: 0 0 120px
+
+		&__burger 
+			display: block
+			position: relative
+			width: 30px
+			height: 20px
+			z-index: 3
+			span
+				position: absolute
+				left: 0
+				top: 9px
+				width: 100%
+				height: 2px
+				background-color: #fff
+				transition: all .3s ease 0s
+
+		&__burger::before,
+		&__burger::after
+			content: ''
+			position: absolute
+			left: 0
+			background-color: #fff
+			width: 100%
+			height: 2px	
+			transition: all .3s ease 0s
+
+		&__burger::before
+			top: 0
+
+		&__burger::after
+			bottom: 0
+
+		&__burger.active span
+			transform: scale(0)
+
+		&__burger.active::before
+			transform: rotate(45deg)
+			top: 9px
+
+		&__burger.active::after
+			transform: rotate(-45deg)
+			bottom: 9px
+
+		&__menu
+			position: fixed
+			top: -100%
+			overflow: auto
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: $bgcHeader
+			padding: 50px 0px 0px 0px
+			transition: all .4s ease 0s
+			text-align: center
+
+
+		
+		&__menu.active
+			top: 0
+		&__list
+			display: block
+			width: 100%
+			margin: 0 0 100px 0
+		&__list li
+			margin: 50px 10px		
+		&__list li:hover:after, li:focus:after
+			transform: scale(0)
+		// &__list a:hover
+			// color: $bgHeader
+		&__link 
+			font-size: 20px	
+
+	.active_menu:after
+		transform: scale(0) !important
+
+
+
+
+	.about 
+		padding: 40px 0px 0px 0px
+		&__text 
+			font-size: 20px
+			line-height: 30px
+			margin: 40px 0
+
+
+	.main-grid
+		display: grid
+		grid-template-areas: "a a b b b b" "e e d d d d" ". . . . . ." "c c c c c c" ". . . . . ."  "g g g g g g" ". . . . . ."
+				
+
+	.blog-item
+		img
+			max-width: 280px
+			margin: 20px 0
+
+
+	.down-form
+		display: grid
+		grid-template-columns: 1fr
+	.form
+		&__item	
+			display: grid
+			width: 280px
+		& :nth-child(4)
+			grid-column: 1/2
+		& :nth-child(5)
+			grid-column: 1/2	
+		& :nth-child(8)
+			grid-column: 1/2
+		& :nth-child(9)
+			grid-column: 1/2				
+	.gallery
+		height: 400px
+
+		.buttons		
+			i
+				font-size: 40px
+
+	.footer 
+		&__body 
+			display: grid
+			grid-template-columns: 1fr
+			a
+				font-size: 26px
+			i
+				font-size: 36px
+
+
+
+
+@media only screen and (max-width: 540px)
+	
+	.main-grid
+		grid-template-columns: 1fr
+		grid-template-rows: repeat(6 , minmax(50px, auto))
+		grid-template-areas: "a" "b" "." "e" "d" "f" "c" "." "g" "i" "h" 
+
+	.gallery
+		height: 250px
+

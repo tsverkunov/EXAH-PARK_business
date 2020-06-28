@@ -1,0 +1,493 @@
+body
+
+	background-color: lighten($bgcHeader, 10%)
+	font-family: 'Jura', sans-serif;
+	h1, h3
+		text-align: center
+		font-size: 23px
+		margin: 0 0 15px 0
+		text-transform: uppercase
+		letter-spacing: 4px
+		color: #fff
+	a
+		outline: none !important
+.container
+	max-width: 1180px
+	margin: 0 auto
+	padding: 0 12px
+		
+
+.header
+	position: fixed
+	width: 100%
+	left: 0
+	top: 0
+	z-index: 99
+	
+	&__body 
+		display: flex
+		position: relative
+		margin: 0 10px
+		justify-content: space-between
+		height: 80px
+		align-items: center
+
+	
+	&__logo 
+		flex: 0 0 170px
+		z-index: 3
+		img
+			max-width: 100%
+	
+	&__burger 
+			display: none
+	
+	&__menu 
+
+	
+	&__link
+		color: #fff
+		text-transform: uppercase
+		text-decoration: none
+		font-size: 15px
+		letter-spacing: 3px
+		transition: all .3s ease 0s
+
+	&__list 
+		display: flex
+		position: relative
+		z-index: 3
+		li
+			list-style: none
+			margin:  0 15px
+			position: relative			
+
+
+	&__list li::after
+		position: absolute
+		content: ''
+		left: 0
+		top: 20px
+		background-color: red 
+		height: 0.5px
+		width: 100%	
+		transition: transform .3s ease-in-out
+		transform: scale(0)
+
+	&__list li:hover:after, li:focus:after
+		transform: scale(1)
+
+ .active_menu:after
+		position: absolute
+		content: ''
+		left: 0
+		top: 20px
+		background-color: $bgHeader
+		height: 0.5px
+		width: 100%	
+		transition: all .3s ease-in-out
+		transform: scale(1)
+		z-index: 3
+
+
+.header::after
+	content: ''
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	background-color: darken($bgcHeader, 5%)
+	z-index: 2
+
+
+
+.about 
+	padding: 100px 0px 0px 0px
+	// background-image: url(../../img/gallery/8.jpg) 
+	background-size: cover
+	background-position: center
+	position: relative
+	z-index: 2
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		// background-color: $bgcHeader
+		opacity: .9
+		z-index: -1
+
+
+	&__text 
+		font-size: 20px
+		line-height: 32px
+		margin: 40px 0
+		color: lighten($bgcHeader, 50%)
+		text-indent: 10px
+		p
+			text-align: justify
+
+
+
+
+.specify
+	display: grid
+	align-content: center
+	justify-content: center
+	color: #fff
+	font-size: 20px
+	line-height: 25px	
+	h3
+		text-align: center
+		font-size: 24px
+	p
+		text-align: justify
+		margin: 10px 0
+		color: lighten($bgcHeader, 50%)
+
+.main-blog
+		
+
+.main-grid
+	display: grid
+	grid-template-columns: repeat(6, 1fr)
+	grid-template-rows: repeat(4 , minmax(80px, auto))
+	grid-gap: 10px
+	margin: 60px 0 30px 0
+	grid-template-areas: "a a a b b b" "e e e d d d" ". . . . . ." "c c c c c c" ". . . . . ." "g g g g g g"
+		
+	&__items1
+		grid-area: a
+	&__items2
+		grid-area: b
+	&__items3
+		grid-area: c		
+	&__items4
+		grid-area: d
+	&__items5
+		grid-area: e
+	&__items6
+		grid-area: f	
+	&__items7
+		grid-area: g
+	&__items8
+		grid-area: h	
+	&__items9
+		grid-area: i
+
+
+
+.blog-item
+	text-decoration: none
+	
+	img
+		max-width: 350px
+		margin: 40px 0
+
+	&__img
+	&__price
+		text-align: center
+		text-decoration: none
+		
+		p
+			text-align: center
+			color: #fff
+
+	&__content
+		text-transform: uppercase
+		position: relative
+		text-align: center
+		text-decoration: none
+		color: #fff
+		background-color: $bgHeader
+		border-radius: 3px
+		transition: .2s
+
+		p
+			text-align: center
+			font-size: 20px
+			padding: 5px
+			color: #fff
+	&__content:hover
+			background-color: darken($bgHeader, 12%)
+
+			
+
+
+
+.down-form
+	display: grid
+	grid-template-columns: repeat(3, minmax(100px, auto))
+	grid-gap: 15px
+	justify-items: center
+	justify-content: center
+	input
+		text-align: center
+
+	p
+		color: #fff
+		text-transform: uppercase
+		font-size: 20px
+	a
+		text-decoration: none
+		color: lighten($bgHeader, 20%)
+	span
+		padding: 0 7px	
+#agreement
+	font-size: 14px
+	font-family: 'Roboto', sans-serif;	
+	font-weight: 300
+	text-transform: none
+	text-align: center
+
+.form 
+	&__wrapper 
+		display: grid
+		margin: 30px auto
+		justify-content: center
+		text-align: center
+		span
+			text-align: center
+			color: #fff
+			font-size: 20px
+			margin: 0 0 20px 0
+			text-transform: uppercase
+
+	&__item	
+		display: grid
+		width: 250px
+		border-radius: 3px
+		border: 0.9px solid $bgItems
+		height: 38px
+		-webkit-appearance: none
+		margin: 20px 0 0 0
+	& :nth-child(4)
+		grid-column: 2/3
+	& :nth-child(5)
+		grid-column: 1/2	
+	& :nth-child(8)
+		grid-column: 2/3
+	& :nth-child(9)
+		grid-column: 1/4
+
+.submit
+	background-color: $bgHeader
+	color: #fff
+	height: 40px
+	border: none
+	text-transform: uppercase
+	letter-spacing: 3px
+	border-radius: 3px
+	font-size: 20px
+	width: 230px
+	transition: all 0.5s cubic-bezier(0.68,-0.55,0.265,1.55) 0s
+
+	&:hover
+		width: 245px
+		background-color: darken($bgHeader, 12%)
+
+		
+.footer 
+	background-color: darken($bgcHeader, 5%)
+	height: 100%
+	width: 100%
+	&__body 
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-template-rows: minmax(50px, auto)
+		justify-items: center
+		align-items: center
+		text-align: center
+		a
+			text-decoration: none
+			color: #fff
+			margin: 10px 0 30px 0
+
+		i
+			color: $bgHeader
+			font-size: 22px
+			margin: 10px 0
+			animation: pulse-my-icon 4s infinite
+			animation-timing-function: linear
+
+			@keyframes pulse-my-icon
+			    0%
+			      transform: rotate(0deg)
+			    2%
+			    	transform: rotate(-15deg) 
+			    4%
+			      transform: rotate(0deg)  
+			    6%
+			      transform: rotate(15deg)
+			    8%
+			      transform: rotate(0deg)
+			    10%
+			    	transform: rotate(-15deg) 
+			    12%
+			      transform: rotate(0deg)  
+			    14%
+			      transform: rotate(15deg)
+			    18%
+			      transform: rotate(0deg)			        
+
+
+	&__contacts
+		display: grid
+
+	&__social
+		display: grid
+
+
+.gallery 
+	max-width: 860px
+	margin: 10px auto
+	position: relative
+	overflow: hidden
+	background-size: cover
+
+	align-content: center
+
+	.photos 
+		position: relative
+		height: 580px
+		margin: auto 0
+		img
+			width: 100%
+			position: absolute
+			opacity: 0
+			transition: opacity 1s
+
+	.buttons		
+		i
+			color: lighten($bgcHeader, 40%)
+			font-size: 50px
+		.prev 
+			position: absolute
+			top: 40%
+			left: 10px
+		.next 
+			position: absolute
+			top: 40%
+			right: 10px
+
+.gallery
+	.photos 
+		img.showed
+			opacity: 1
+
+
+
+
+
+.popup
+	background-color: #fff
+	width: 400px
+	padding: 20px
+	margin: 0 auto
+	position: relative
+	
+
+// .options
+// 	display: grid
+// 	border: solid, 3px, #fff
+// 	border-radius: 10px
+// 	box-shadow: -3px 3px 15px
+// 	outline-offset: 18px
+// 	outline-radius: 10px
+
+// .outline
+// 	width: 300px
+// 	height: 300px
+
+
+// .test
+// 	background-color:#fff
+// 	&__wrapper 
+// 		display: grid
+// 		grid-template-columns: repeat(3, 250px)
+// 		grid-template-rows: 250px 250px
+// 		grid-column-gap: 80px
+// 		grid-row-gap: 40px
+// 		justify-content: center
+// 		margin: 100px auto
+
+
+// 	&__item1
+// 		background-color: #00B6B0
+// 		outline: dashed, 4px, #00B6B0
+// 	&__item6
+// 		background-color: #00B6B0
+// 		outline: solid, 4px, #00B6B0
+// 	&__item2
+// 		background-color: #00CDA1
+// 		outline: solid, 4px, #00CDA1		
+// 	&__item5
+// 		background-color: #00CDA1
+// 		outline: solid, 4px, #00CDA1
+// 	&__item3
+// 		background-color: #00E590
+// 		outline: solid, 4px, #00E590
+// 	&__item4
+// 		background-color: #00E590
+// 		outline: solid, 4px, #00E590	
+
+
+
+
+
+
+
+
+
+	// & :nth-child(2)
+	// 	background-color: #00CDA1
+	// & :nth-child(5)
+	// 	background-color: #00CDA1
+	// & :nth-child()
+	// 	background-color: #00B6B0
+	// & :nth-child(6)
+	// 	background-color: #00B6B0
+	// & :nth-child(3)
+	// 	background-color: #00E590
+	// & :nth-child(4)
+	// 	background-color: #00E590
+
+
+
+
+
+@-webkit-keyframes fadeInDownxxx 
+  from 
+    opacity: 0
+    -webkit-transform: translate3d(-100%, -100%, 0)
+    transform: translate3d(-100%, -100%, 0)
+  
+
+  to 
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+  
+
+
+@keyframes fadeInDownxxx 
+  from 
+    opacity: 0
+    -webkit-transform: translate3d(-100%, -100%, 0)
+    transform: translate3d(-100%, -100%, 0)
+  
+
+  to 
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+  
+
+
+.fadeInDownxxx 
+  -webkit-animation-name: fadeInDownxxx
+  animation-name: fadeInDownxxx

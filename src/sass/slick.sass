@@ -1,0 +1,103 @@
+/* Слайдер */
+.slick-slider
+/* Слайдер запущен */
+.slick-slider.slick-initialized
+/* Слайдер с точками */
+.slick-slider.slick-dotted
+/* Ограничивающая оболочка */
+.slick-list
+	overflow: hidden
+/* Лента слайдов */
+.slick-track
+	display: flex
+	// align-items: flex-start
+
+/* Слайд */
+.slick-slide
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active
+/* Слайд основной */
+.slick-slide.slick-current
+/* Слайд по центру */
+.slick-slide.slick-center
+/* Клонированный слайд */
+.slick-slide.slick-cloned
+/* Стрелка */
+.slick-arrow
+/* Стрелка влево */
+.slick-arrow.slick-prev
+/* Стрелка вправо */
+.slick-arrow.slick-next
+/* Стрелка не активная */
+.slick-arrow.slick-disabled
+/* Точки (булиты) */
+.slick-dots
+.slick-dots li
+/* Активная точка */
+.slick-dots li.slick-active
+/* Элемент точки */
+.slick-dots li button
+
+/* Конкретный слайдер */
+.slider
+	position: relative
+	padding: 0 
+	img
+		width: 100%
+		// border-radius: 20px
+.slider .slick-arrow
+	position: absolute
+	top: 50%
+	margin: -30px 0 0 0 
+	z-index: 10	
+	font-size: 0
+	width: 30px
+	height: 60px
+	border: 0
+	opacity: .7
+.slider .slick-arrow.slick-prev
+	left: 0	
+	background: url('../../build/img/gallery/back.svg') 0 0 / 100% no-repeat 
+.slider .slick-arrow.slick-next
+	right: 0
+	background: url('../../build/img/gallery/next.svg') 0 0 / 100% no-repeat
+.slider .slick-dots
+	display: flex
+	align-items: center
+	justify-content: center
+
+.slider .slick-dots li
+	list-style: none
+	margin: 0 8px
+
+.slider .slick-dots li button
+	font-size: 0
+	width: 6px
+	height: 6px
+	background-color: lighten($bgcHeader, 25%)
+	// border-radius: 50%
+	border: 0
+	transition: .3s
+.slider .slick-dots li button:hover
+	background-color: lighten($bgcHeader, 45%)	
+.slider .slick-dots li.slick-active button
+	background-color: lighten($bgcHeader, 100%)
+
+.slider__item
+	transition: all .3s ease 0s
+	text-align: center
+	// opacity: .5
+	padding: 0
+
+.slider .slick-arrow.slick-disabled
+	opacity: .2
+// .slider .slick-slide.slick-center
+// 	opacity: 1	
+
+// .slider .slick-track
+// 	display: block
+.wrapper-slider
+	max-width: 1000px
+	margin: 0 auto
+
